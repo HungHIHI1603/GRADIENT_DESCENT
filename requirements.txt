@@ -1,0 +1,2 @@
+# Ứng dụng sử dụng thư viện chuẩn Python: tkinter, math và typing.
+# Không cần cài thêm thư viện bằng pip.

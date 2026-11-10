@@ -1,0 +1,74 @@
+ĐỀ CƯƠNG BÁO CÁO VÀ BẢO VỆ ĐỒ ÁN
+Học phần: Nhập môn Tối ưu hóa – HK261
+Đề tài số 1: Tìm hiểu và cài đặt ứng dụng bài toán tối ưu hóa bậc nhất – Gradient
+
+I. MỤC TIÊU TRÌNH BÀY
+1. Giới thiệu bài toán tối thiểu hóa hàm chi phí một biến.
+2. Trình bày nguyên lý Gradient Descent và các công thức.
+3. Giới thiệu chương trình Python, Input, Output và các bước tính toán.
+4. Chạy thử ứng dụng và giải thích kết quả.
+
+II. NỘI DUNG BẢO VỆ THEO CẤU TRÚC BÁO CÁO
+1. Chương 1 – Cơ sở lý thuyết
+   - Khái niệm tối ưu hóa.
+   - Hàm mục tiêu C(x)=ax^2+bx+c.
+   - Đạo hàm C'(x)=2ax+b.
+   - Quy tắc cập nhật x(k+1)=x(k)-alpha*C'(x(k)).
+   - Ý nghĩa alpha, epsilon và điều kiện hội tụ trong mô hình bậc hai.
+
+2. Chương 2 – Áp dụng thuật toán
+   - Bài toán: tìm x làm C(x) nhỏ nhất.
+   - Input: a, b, c, x0, alpha, số lần lặp tối đa.
+   - Mô hình: tính đạo hàm, cập nhật x, kiểm tra điều kiện dừng.
+   - Output: nghiệm Gradient, C(x), nghiệm chính xác tham khảo, sai lệch, số bước, kết quả đầu ra.
+   - Trình diễn chạy ứng dụng.
+
+3. Chương 3 – Kết luận
+   - Nêu kết quả đạt được.
+   - Nêu hạn chế: hàm một biến bậc hai giả định, chưa có dữ liệu doanh nghiệp thật.
+   - Nêu hướng phát triển.
+
+III. KỊCH BẢN DEMO
+1. Mở thư mục dự án và chạy lệnh: python app.py
+2. Nhập bộ tham số: a=1, b=-20, c=150, x0=0, alpha=0.1, số lần lặp=100.
+3. Nhấn “Chạy tối ưu”.
+4. Giải thích kết quả tham khảo: x*=10 và C(x*)=50.
+5. Giải thích nghiệm gần tối ưu, giá trị hàm và số bước lặp mà chương trình hiển thị.
+
+IV. CÂU HỎI GIẢNG VIÊN CÓ THỂ HỎI
+1. Gradient Descent là gì?
+   Trả lời: Là phương pháp tối ưu lặp, cập nhật biến theo hướng ngược dấu gradient để làm giảm hàm mục tiêu.
+
+2. Vì sao phải tính đạo hàm?
+   Trả lời: Đạo hàm cho biết độ dốc và hướng tăng/giảm của hàm tại điểm hiện tại.
+
+3. Alpha là gì?
+   Trả lời: Là tốc độ học, quyết định độ dài bước cập nhật. Quá lớn có thể phân kỳ; quá nhỏ làm hội tụ chậm.
+
+4. a, b, c có ý nghĩa gì?
+   Trả lời: a là hệ số bậc hai; b là hệ số bậc nhất; c là hằng số tự do.
+
+5. Vì sao yêu cầu a>0?
+   Trả lời: Vì parabol mở lên và hàm có cực tiểu duy nhất.
+
+6. Vì sao c không làm thay đổi vị trí nghiệm tối ưu?
+   Trả lời: Vì đạo hàm của hằng số c bằng 0; c chỉ dịch chuyển giá trị hàm theo phương đứng.
+
+7. Vì sao chương trình có nghiệm chính xác?
+   Trả lời: Để đối chiếu sai lệch của nghiệm gần đúng Gradient Descent trên hàm bậc hai.
+
+8. Input và Output của chương trình là gì?
+   Trả lời: Input gồm a,b,c,x0,alpha và số lần lặp; Output gồm nghiệm tìm được, giá trị hàm, nghiệm tham khảo, sai lệch, số bước, kết quả đầu ra.
+
+9. Tại sao alpha=0.8 không phù hợp khi a=30?
+   Trả lời: Điều kiện đủ hội tụ của hàm bậc hai này là 0<alpha<1/a, tức alpha<0.0333333 khi a=30. Alpha=0.8 quá lớn.
+
+10. Ứng dụng có phải chi phí thực tế của doanh nghiệp không?
+    Trả lời: Không. Đây là hàm chi phí giả định để minh họa thuật toán. Muốn áp dụng thực tế cần dữ liệu, đơn vị đo và ràng buộc thực tế.
+
+V. VIỆC CẦN HOÀN THIỆN TRƯỚC KHI NỘP
+- Điền tên, MSSV và lớp trên bìa báo cáo.
+- Chạy ứng dụng trên máy và chụp ảnh thật.
+- Bổ sung ảnh giao diện, kết quả, đồ thị và bảng vào Chương 2.
+- Cập nhật mục lục/số trang trong Word.
+- Kiểm tra báo cáo không quá 20 trang theo yêu cầu BM-006.
